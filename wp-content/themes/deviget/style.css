@@ -10,3 +10,280 @@ License URI: LICENSE
 Text Domain: deviget_theme
 */
 
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* reset end */
+
+/* Typography */
+
+html { font-size: 62.5%; } 
+body { font-size: 1.6rem; 	line-height: 2.6rem;	} 
+h1   { font-size: 3rem; 	line-height: 6rem;		} 
+h2   { font-size: 2.8rem; 	line-height: 4rem;  margin-bottom: 1.4rem;	} 
+h3   { font-size: 2rem;  } 
+h4   { font-size: 1.8rem; } 
+p   { font-size: 1.6rem; }
+
+
+body { 
+	font-family: 'Lato', sans-serif;
+	color: #2f2f2f;
+
+	} 
+
+
+a {
+	text-decoration: none;
+	color: #a8281a;
+	}
+
+
+a:hover {
+	text-decoration: underline;
+	}
+
+.clear {
+	clear: both;
+	}
+
+
+
+.wrapper {
+	max-width: 1000px; 
+	margin: 0 auto;
+	position: relative;
+	padding: 0 15px;
+	}
+
+
+/* header */
+
+.header {
+	background: #252525;
+	margin: 0 auto;
+	color: #FFF;
+	padding: 3rem 0;
+	margin-bottom: 6rem;
+	height: 4rem
+	}
+
+.header a {
+	color: #FFF;
+	}
+
+.header .logo {
+    display: inline-block;
+    float: left;
+    padding: 1rem 0;
+    margin-right: 10rem;
+	}
+
+
+.header nav {
+	float: left;
+	}
+
+.header ul li a {
+	color: #C2C2C2;
+	display: block;
+	padding: 1rem 2rem;
+	}	
+
+
+.header ul li {
+	float: left;
+	}
+
+
+.header ul ul {
+	display: none;
+	}
+
+.header .search {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	}
+
+
+/* main */
+
+main {
+	width: 66%;
+	float: left;
+	}
+
+main article {
+	padding: 2rem;
+	margin-bottom: 4rem;
+	background-color: #FFF;
+	position: relative;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+
+	}
+
+main article h2 a {
+	color: #2f2f2f;
+	}
+
+main article h2 a:hover {
+	color: #a8281a;
+	text-decoration: none;
+	}
+
+main article .post-meta {
+	margin-bottom: 1.8rem;
+	font-size: 1.3rem;
+	color: #7f7e7e;
+	}
+
+
+main article img {
+	max-width: 100%;
+	}
+
+main article hr {
+	height: 1px; 
+	margin: 2rem 0;
+	color: #ccc; 
+	background: #ccc; 
+	font-size: 0; 
+	border: 0; 
+	}
+
+
+main article .categories {
+	color: #7f7e7e;
+	font-size: 1.3rem;
+
+}
+
+main article .readmore {
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+	font-size: 1.3rem;
+}
+
+/* sidebar */
+.sidebar {
+	width: 28%;
+	float: right;
+}
+
+
+/* footer */
+.footer {
+	clear: both;
+	margin-top: 4rem;
+	color: #c7c7c7;
+
+}
+
+.footer .footer-widgets {
+	background-color: #252525;
+	padding: 3.6rem 0;
+}
+
+
+
+.footer .footer-widgets h2 {
+	color: #FFF;
+}
+
+.footer .footer-widgets h2 {
+	color: #FFF;
+}
+
+.footer .footer-widgets .columns-3 {
+	width: 25%;
+    float: left;
+    padding: 2rem 6% 4rem; 
+}
+
+.footer .footer-widgets .columns-2 {
+	width: 50%;
+    float: left;
+}
+
+.footer .footer-widgets .columns-1 {
+	width: 100%;
+    float: left;
+}
+
+
+
+.footer .footer-widgets .columns-3:first-of-type{
+	padding-left: 0;
+}
+
+.footer .footer-widgets .columns-3:last-of-type{
+	padding-right: 0;
+}
+
+.footer .copyright {
+	background-color: #1b1b1b;
+	padding: 3.6rem 0;
+	clear: both;
+}
+
+.footer .copyright a {
+	color: #FFF;
+}
+
+
+/* Wordpress elements */
+
+/* Responsive features */

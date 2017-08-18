@@ -15,7 +15,10 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 17.10 - Added homepage posts loop and featured image size, regenerated thumbnails.
 - 17.28 - Added the categories,	readmore link , and reordered the post elements a bit
 - 17.54 - Added the main sidebar and updated the widgets rendering
-
+- 18.24 - Added footer widgets and some logic to hide/show the section based on sidebars availability
+- pause
+- 19.40 - started CSS
+- 20.40 - first CSS commit
 
 ### Blocking tasks
 - I spent much more time than I anticipated (almost 40 minutes!) working on the image upload widget.

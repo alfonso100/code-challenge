@@ -18,8 +18,8 @@
 
 				<!-- post details -->
 				<div class="post-meta">
-				<span class="author"><?php _e( 'by', 'deviget_theme' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="date"><?php _e( 'on', 'deviget_theme' ); ?><?php the_time('F j, Y'); ?></span>
+				<span class="author"><?php _e( 'by', 'deviget_theme' ); ?> <?php the_author_posts_link(); ?></span> 
+				<span class="date"><?php _e( 'on', 'deviget_theme' ); ?> <?php the_time('F j, Y'); ?></span>
 				</div>
 				<!-- end post details -->
 
@@ -32,7 +32,7 @@
 				<!-- end post thumbnail -->
 
 
-				<?php the_excerpt();  ?>
+				<?php the_excerpt();  ?> <?php the_tags(); ?>
 
 				<hr />
 				<p class="categories"><?php _e( 'Categories: ', 'deviget_theme' ); ?> <?php echo get_the_category_list(', '); ?></p>
@@ -54,7 +54,8 @@
 			<!-- end article -->
 
 		<?php endif; ?>
-
+		
+		<?php the_posts_navigation(); ?>
 
 		</section>
 		<!-- end section -->

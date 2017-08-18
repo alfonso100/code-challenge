@@ -1,8 +1,5 @@
 <?php 
 
-
-
-
 // add title-tag support
 function deviget_slug_setup() {
 
@@ -17,12 +14,26 @@ add_action( 'after_setup_theme', 'deviget_slug_setup' );
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu' )
+      'header-menu' => __( 'Header Menu', 'deviget_theme' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 // header menu end
+
+
+// thumbnails support 
+add_theme_support( 'post-thumbnails' );
+
+
+/// featured image size
+add_image_size( 'featured-image', 624, 180, true ); 
+
+// Add default posts and comments RSS feed links to head.
+add_theme_support( 'automatic-feed-links' );
+
+
+
 
 
 
@@ -265,10 +276,14 @@ add_action('admin_enqueue_scripts', 'aboutwidget_enqueue');
 
 
 
-// thumbnails support 
-add_theme_support( 'post-thumbnails' );
 
 
-/// featured image size
-add_image_size( 'featured-image', 624, 180, true ); 
+// google fonts
+function deviget_styles() {
+
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'deviget-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,900', false ); 
+}
+ 
+add_action( 'wp_enqueue_scripts', 'deviget_styles' );
 
