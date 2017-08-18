@@ -19,15 +19,18 @@
 
 					<!-- logo -->
 					<div class="logo">
-						
+						<h1><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
 					</div>
 					<!-- end logo -->
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
-						
+						<?php wp_nav_menu('header-menu'); ?>
 					</nav>
 					<!-- end nav -->
+
+					<!-- search -->
+					<a class="search" href="#">Search</a>
 
 			</header>
 			<!-- end header -->

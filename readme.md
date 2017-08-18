@@ -11,6 +11,9 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 15.00 - Added theme menu location
 - 15.07 - Added theme bakgrounds support
 - 16.49 - Added social and about widgets, changed Text Domain
+- 17.00 - Started with frontend HTML markup. Added site name and navigation menu
+- 17.10 - Added homepage posts loop and featured image size, regenerated thumbnails.
+- 17.28 - Added the categories,	readmore link , and reordered the post elements a bit
 
 
 ### Blocking tasks

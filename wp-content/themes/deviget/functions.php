@@ -1,6 +1,8 @@
 <?php 
 
 
+
+
 // add title-tag support
 function deviget_slug_setup() {
 
@@ -21,6 +23,7 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 // header menu end
+
 
 
 // theme sidebars
@@ -221,7 +224,6 @@ function register_about_widget() {
 }
 add_action( 'widgets_init', 'register_about_widget' );
 
-
 // queue up the necessary js
 function aboutwidget_enqueue()
 {
@@ -235,4 +237,11 @@ add_action('admin_enqueue_scripts', 'aboutwidget_enqueue');
 // 2 - about widget end
 
 
+
+// thumbnails support 
+add_theme_support( 'post-thumbnails' );
+
+
+/// featured image size
+add_image_size( 'featured-image', 624, 180, true ); 
 
