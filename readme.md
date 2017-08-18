@@ -10,5 +10,8 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 14.53 - Added theme sidebars
 - 15.00 - Added theme menu location
 - 15.07 - Added theme bakgrounds support
+- 16.49 - Added social and about widgets, changed Text Domain
 
 
+### Blocking tasks
+- I spent much more time than I anticipated (almost 40 minutes!) working on the image upload widget.
