@@ -10,3 +10,5 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 14.53 - Added theme sidebars
 - 15.00 - Added theme menu location
 - 15.07 - Added theme bakgrounds support
+
+
