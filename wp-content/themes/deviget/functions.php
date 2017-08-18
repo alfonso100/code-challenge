@@ -2,14 +2,25 @@
 
 
 // add title-tag support
-add_action( 'after_setup_theme', 'deviget_slug_setup' );
-
 function deviget_slug_setup() {
-	
+
 	add_theme_support( 'title-tag' );
 
-} // title tag-suport end
+} 
+add_action( 'after_setup_theme', 'deviget_slug_setup' );
+// title tag-suport end
 
+
+// header menu
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+// header menu end
 
 
 // theme sidebars
@@ -56,5 +67,9 @@ if ( function_exists('register_sidebar') ) {
 } // theme sidebars end
 
 
+
+// custom backgrounds
+add_theme_support( 'custom-background' );
+// custom backgrounds end
 
 ?>
