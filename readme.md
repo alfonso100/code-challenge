@@ -14,6 +14,7 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 17.00 - Started with frontend HTML markup. Added site name and navigation menu
 - 17.10 - Added homepage posts loop and featured image size, regenerated thumbnails.
 - 17.28 - Added the categories,	readmore link , and reordered the post elements a bit
+- 17.54 - Added the main sidebar and updated the widgets rendering
 
 
 ### Blocking tasks

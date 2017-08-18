@@ -92,21 +92,35 @@ class Social_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-		if ( ! empty( $instance['twitter'] ) ) {
+		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo esc_html__( 'Hello, World!', 'deviget_theme' );
+
+		echo '<ul>';
+		if ( ! empty( $instance['twitter'] ) ) 		{ echo '<li><a class="twitter" target="_blank" href="'.$instance['twitter'].'">Twitter</a></li>'; }
+		if ( ! empty( $instance['facebook'] ) ) 	{ echo '<li><a class="facebook" target="_blank" href="'.$instance['facebook'].'">Facebook</a></li>'; }
+		if ( ! empty( $instance['pinterest'] ) ) 	{ echo '<li><a class="pinterest" target="_blank" href="'.$instance['pinterest'].'">Pinterest</a></li>'; }
+		if ( ! empty( $instance['google_plus'] ) ) 	{ echo '<li><a class="google_plus" target="_blank" href="'.$instance['google_plus'].'">Google +</a></li>'; }
+		if ( ! empty( $instance['rss'] ) ) 			{ echo '<li><a class="rss" target="_blank" href="'.$instance['rss'].'">Rss</a></li>'; }
+		echo '</ul>';
+
 		echo $args['after_widget'];
 	}
 
 	public function form( $instance ) {
 
+		$title 	= ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'deviget_theme' );
 		$twitter 	= ! empty( $instance['twitter'] ) ? $instance['twitter'] : esc_html__( '', 'deviget_theme' );
 		$facebook 	= ! empty( $instance['facebook'] ) ? $instance['facebook'] : esc_html__( '', 'deviget_theme' );
 		$pinterest 	= ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : esc_html__( '', 'deviget_theme' );
 		$google_plus 	= ! empty( $instance['google_plus'] ) ? $instance['google_plus'] : esc_html__( '', 'deviget_theme' );
 		$rss 	= ! empty( $instance['rss'] ) ? $instance['rss'] : esc_html__( '', 'deviget_theme' );
 		?>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Widget Title:', 'deviget_theme' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php if($title) { echo esc_attr( $title ); } ?>">
+		</p>
+
 		<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_attr_e( 'Twitter URL:', 'deviget_theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php if($twitter) { echo esc_attr( $twitter ); } ?>">
@@ -131,6 +145,7 @@ class Social_Widget extends WP_Widget {
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
+		$instance['title'] 			= ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['twitter'] 		= ( ! empty( $new_instance['twitter'] ) ) ? strip_tags( $new_instance['twitter'] ) : '';
 		$instance['facebook'] 		= ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
 		$instance['pinterest'] 		= ( ! empty( $new_instance['pinterest'] ) ) ? strip_tags( $new_instance['pinterest'] ) : '';
@@ -166,13 +181,19 @@ class About_Widget extends WP_Widget
     );
   }
 
-  public function widget( $args, $instance )
-  {
-    // basic output just for this example
-    echo '<a href="#">
-      <img src="'.esc_url($instance['image_uri']).'" />
-      <h4>'.esc_html($instance['image_uri']).'</h4>
-    </a>';
+  public function widget( $args, $instance ) {
+  	
+  	echo $args['before_widget'];
+ 
+  	if ( ! empty( $instance['image_uri'] ) ) 	{   echo '<img src="'.esc_url($instance['image_uri']).'" />'; }
+  	if ( ! empty( $instance['name'] ) ) {
+			echo $args['before_title'] . apply_filters( 'widget_title', $instance['name'] ) . $args['after_title'];
+	}
+  	if ( ! empty( $instance['description'] ) ) 	{   echo '<p>'.$instance['description'].'</p>'; }
+  	if ( ! empty( $instance['link'] ) ) 		{   echo '<a href="'.$instance['link'].'">'; echo esc_attr_e( 'Read more &raquo;', 'deviget_theme' ); echo '</a></p>'; }
+
+  	echo $args['after_widget'];
+
   }
 
   public function form( $instance ) {
@@ -180,6 +201,7 @@ class About_Widget extends WP_Widget
    	$image_uri 		= ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : esc_html__( '', 'deviget_theme' );
    	$name 			= ! empty( $instance['name'] ) ? $instance['name'] : esc_html__( '', 'deviget_theme' );
    	$description 	= ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'deviget_theme' );
+   	$link 			= ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'deviget_theme' );
 
     ?>
 
@@ -201,6 +223,10 @@ class About_Widget extends WP_Widget
 	<textarea rows="6" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>" type="text"><?php if($description) { echo esc_attr( $description ); }?></textarea>
 	</p>
 	
+	<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read more link:', 'deviget_theme' ); ?></label> 
+	<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text" value="<?php if($link) { echo esc_attr( $link ); }?>">
+	</p>
 
     <?php
   }
@@ -210,6 +236,7 @@ class About_Widget extends WP_Widget
 		$instance['name'] 			= ( ! empty( $new_instance['name'] ) ) ? strip_tags( $new_instance['name'] ) : '';
 		$instance['description'] 	= ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
 		$instance['image_uri'] 		= ( ! empty( $new_instance['image_uri'] ) ) ? strip_tags( $new_instance['image_uri'] ) : '';
+		$instance['link'] 			= ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
 
 		return $instance;
 	}
