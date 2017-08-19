@@ -15,7 +15,6 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); ?>
 
 			</article>
 			<!-- /article -->

@@ -148,16 +148,43 @@ a, nav, div, img {
 	display: block;
 	padding: 1rem 2rem;
 	}	
-
+	
+.header ul li.menu-item-has-children > a:after {
+	content: ' \25be';
+	}
+		
+.header ul ul li.menu-item-has-children > a:after {
+	content: ' \25b8';
+	}
+		
 
 .header ul li {
 	float: left;
+	position: relative;
 	}
 
 
 .header ul ul {
+	background-color: #252525;
+	z-index: 1000;
+	width: 200px;
+	position: absolute;
 	display: none;
 	}
+
+
+.header ul ul li {
+	float: none;
+	background-color: #252525;
+	position: relative;
+	border-top: 1px solid #333;
+	}
+
+.header ul ul ul {
+	position: absolute;
+	right: -200px;
+	top: -1px
+}	
 
 .header .search {
 	position: absolute;
@@ -489,6 +516,38 @@ input[type="submit"] {
 }
 
 
+
+
+
+
+#toggle {
+	background: url(assets/img/menu.png) no-repeat;
+	width: 27px;
+	height: 27px;
+	text-indent: -9999px;
+	opacity: 0.5;
+	width: 28px;
+	height: 28px; 
+	float: right;
+	position: absolute;
+	top: 12px;
+	right: 80px;
+	}
+
+#toggle:hover {
+	opacity: 1;
+	}	
+
+#toggle.close {
+	background: url(assets/img/menu-close.png) no-repeat;
+	z-index: 10000;
+	}
+
+
+
+
+
+
 /* Responsive */
 @media only screen and (max-width : 800px) {
 	main {
@@ -503,6 +562,85 @@ input[type="submit"] {
 
 }
 
+@media screen and (min-width: 769px) { 
+	#toggle {
+		display: none; 
+
+	}
+} 
+
+@media screen and (max-width: 768px) { 
+
+	#popout {
+		position: fixed;
+		height: 100%;
+		width: 250px;
+		background: rgb(25, 25, 25);
+		background: rgba(25, 25, 25, .9);
+		color: white;
+		top: 0px;
+		right: -250px;
+		overflow:auto;
+		z-index: 1000;
+	}
+	 
+
+	.header ul {
+		margin-top: 70px;
+	}
+	.header ul li { 
+		border-bottom:1px solid #333; 
+		padding: 10px;
+		width: 100%;
+		float: none
+	}
+	 
+	.header ul li:hover { 
+		background: #111;
+	}
+	 
+	.nav-menu li a { 
+		color:#FFF;
+		text-decoration:none;
+		width:100%;
+	}
+
+	.header ul ul {
+		z-index: 1000;
+		position: relative;
+		display: none;
+		margin: 0;
+		background-color: transparent
+		}
+	
+	
+	.header ul ul li {
+		float: none;
+		background-color: transparent;
+		position: relative;
+		padding: 6px;
+		border: none;
+		}
+	
+	.header ul ul li a {
+		background-color: transparent;
+		border: none;
+
+		}
+		
+		
+	.header ul ul ul {
+		position: relative;
+		right: auto;
+		top: auto
+	}	
+	
+	.header ul ul ul li {
+		padding: 0 0 0 20px;
+	}
+
+
+} 
 
 @media only screen and (max-width : 660px) {
 	.footer .footer-widgets .columns-3 {

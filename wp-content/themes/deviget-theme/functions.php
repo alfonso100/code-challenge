@@ -293,9 +293,10 @@ add_action('admin_enqueue_scripts', 'aboutwidget_enqueue');
 
 // enqueue styles
 function deviget_styles() {
-
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'deviget-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,900', false ); 
+	wp_enqueue_script( 'wpb_slidepanel', get_template_directory_uri() . '/assets/js/menu.js', array('jquery'), '20160909', true );
+
 }
  
 add_action( 'wp_enqueue_scripts', 'deviget_styles' );

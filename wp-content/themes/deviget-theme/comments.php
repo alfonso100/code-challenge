@@ -26,23 +26,7 @@
 <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 
 
-<?php
- 	$defaults = array(
-		'before'           => '<p>' .  _e( 'Pages.', 'deviget-theme' ),
-		'after'            => '</p>',
-		'link_before'      => '',
-		'link_after'       => '',
-		'next_or_number'   => 'number',
-		'separator'        => ' ',
-		'nextpagelink'     =>  _e( 'Next page.', 'deviget-theme' ),
-		'previouspagelink' =>  _e( 'Previous page.', 'deviget-theme' ),
-		'pagelink'         => '%',
-		'echo'             => 1
-	);
- 
-        wp_link_pages( $defaults );
-
-?>
+ <?php wp_link_pages(  ); ?>
 
 
 </div>

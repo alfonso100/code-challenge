@@ -24,7 +24,10 @@
 
 				<!-- nav -->
 				<nav class="nav" role="navigation">
+					<div id="toggle">Show</div>
+					<div id="popout">
 					<?php wp_nav_menu('header-menu'); ?>
+					</div>
 				</nav>
 				<!-- end nav -->
 
