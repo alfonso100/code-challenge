@@ -46,8 +46,8 @@ if ( function_exists('register_sidebar') ) {
 	   'id' => 'sidebar-1',  
 	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	   'after_widget' => '</div>',
-	   'before_title' => '<h2>',
-	   'after_title' => '</h2>'
+	   'before_title' => '<h3>',
+	   'after_title' => '</h3>'
     ));
 
  	// Footer sidebars
@@ -114,7 +114,7 @@ class Social_Widget extends WP_Widget {
 		if ( ! empty( $instance['google_plus'] ) ) 	{ echo '<li><a class="google_plus" target="_blank" href="'.$instance['google_plus'].'">Google +</a></li>'; }
 		if ( ! empty( $instance['rss'] ) ) 			{ echo '<li><a class="rss" target="_blank" href="'.$instance['rss'].'">Rss</a></li>'; }
 		echo '</ul>';
-
+		echo '<div class="clear"></div>';
 		echo $args['after_widget'];
 	}
 
@@ -136,10 +136,19 @@ class Social_Widget extends WP_Widget {
 		<label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_attr_e( 'Twitter URL:', 'deviget_theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php if($twitter) { echo esc_attr( $twitter ); } ?>">
 		</p>
+
+
 		<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_attr_e( 'Facebook URL:', 'deviget_theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" type="text" value="<?php if($facebook) { echo esc_attr( $facebook ); }?>">
 		</p>
+
+
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>"><?php esc_attr_e( 'Pinterest URL:', 'deviget_theme' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'pinterest' ) ); ?>" type="text" value="<?php if($pinterest) { echo esc_attr( $pinterest ); }?>">
+		</p>
+
 
 		<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>"><?php esc_attr_e( 'Google Plus URL:', 'deviget_theme' ); ?></label> 
@@ -196,12 +205,14 @@ class About_Widget extends WP_Widget
   	
   	echo $args['before_widget'];
  
-  	if ( ! empty( $instance['image_uri'] ) ) 	{   echo '<img src="'.esc_url($instance['image_uri']).'" />'; }
+  	if ( ! empty( $instance['image_uri'] ) ) 	{   echo '<a href="'.$instance['link'].'"><img src="'.esc_url($instance['image_uri']).'" /></a>'; }
+  	echo '<div class="inner">';
   	if ( ! empty( $instance['name'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['name'] ) . $args['after_title'];
 	}
   	if ( ! empty( $instance['description'] ) ) 	{   echo '<p>'.$instance['description'].'</p>'; }
   	if ( ! empty( $instance['link'] ) ) 		{   echo '<a href="'.$instance['link'].'">'; echo esc_attr_e( 'Read more &raquo;', 'deviget_theme' ); echo '</a></p>'; }
+  	echo '</div>';
 
   	echo $args['after_widget'];
 

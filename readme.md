@@ -19,6 +19,7 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - pause
 - 19.40 - started CSS
 - 20.40 - first CSS commit
+- 21.12 - added sidebar and footer css, added responsive layout
 
 ### Blocking tasks
 - I spent much more time than I anticipated (almost 40 minutes!) working on the image upload widget.
