@@ -32,7 +32,7 @@
 				<!-- end nav -->
 
 				<!-- search -->
-				<a class="search" href="#">Search</a>
+				<a id="searchbutton" href="#">Search</a>
 				</div> <!-- wrapper -->
 
 		</header>

@@ -25,6 +25,7 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 9:50 fixed theme check errors
 - 9:55 added page and page fullwidth templates
 - 10:23 Fixed a bug with the  wp_link_pages( ) function, added responsive menu and dropdown menu features
+- 10:50 created search function. moved homepage query to loop.php to reuse at search.php template. updated h1 css for search and page titles.
 
 ### Blocking tasks
 - I spent much more time than I anticipated (almost 40 minutes!) working on the image upload widget.

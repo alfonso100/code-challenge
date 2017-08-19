@@ -57,7 +57,17 @@
 			</footer>
 			<!-- end footer -->
 
+		<div class="search-box">
+			<div class="wrapper">
+			<a class="search-close" href="#">x</a>
+			<!-- search -->
+			<form  method="get" action="<?php echo home_url(); ?>" role="search">
+				<input class="search-input" type="search" name="s" placeholder="<?php _e( 'To search, type and hit enter.', 'deviget-theme' ); ?>">
+			</form>
+			<!-- end search -->
 
+		  </div>
+		 </div><!-- end searchbox -->
 
 		<?php wp_footer(); ?>
 

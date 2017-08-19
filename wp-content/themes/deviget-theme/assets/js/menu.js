@@ -39,4 +39,5 @@ $('.search-close').click(
 		
     });
 
+
 })(jQuery);
