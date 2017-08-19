@@ -22,5 +22,8 @@ I'll be updating this readme.md with my steps and a timestamp each update (will 
 - 21.12 - added sidebar and footer css, added responsive layout
 - 21.36 - added single page, comments and comments css
 
+- 9:50 fixed theme check errors
+- 9:55 added page and page fullwidth templates
+
 ### Blocking tasks
 - I spent much more time than I anticipated (almost 40 minutes!) working on the image upload widget.
