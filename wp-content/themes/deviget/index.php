@@ -32,14 +32,14 @@
 				<!-- end post thumbnail -->
 
 
-				<?php the_excerpt();  ?> <?php the_tags(); ?>
+				<?php the_excerpt();  ?> 
 
 				<hr />
 				<p class="categories"><?php _e( 'Categories: ', 'deviget_theme' ); ?> <?php echo get_the_category_list(', '); ?></p>
 				<p class="readmore"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e( 'Continue reading &raquo;', 'deviget_theme' ); ?></a></p>
 
 
-
+			
 			</article>
 			<!-- end article -->
 

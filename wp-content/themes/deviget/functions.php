@@ -33,7 +33,10 @@ add_image_size( 'featured-image', 624, 180, true );
 add_theme_support( 'automatic-feed-links' );
 
 
-
+// define initial content width
+if ( ! isset( $content_width ) ) {
+	$content_width = 1000;
+}
 
 
 
@@ -288,8 +291,7 @@ add_action('admin_enqueue_scripts', 'aboutwidget_enqueue');
 
 
 
-
-// google fonts
+// enqueue styles
 function deviget_styles() {
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );

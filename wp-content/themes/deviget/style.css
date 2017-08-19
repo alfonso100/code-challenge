@@ -71,7 +71,7 @@ h1   { font-size: 3rem; 		}
 h2   { font-size: 2.8rem; 	line-height: 4rem;  margin-bottom: 1.4rem;	} 
 h3   { font-size: 2.4rem; 	line-height: 3rem;  margin-bottom: 1.4rem;	 } 
 h4   { font-size: 1.8rem; } 
-p   { font-size: 1.6rem; }
+p   { font-size: 1.6rem; margin-bottom: 2rem;}
 
 
 body { 
@@ -374,6 +374,113 @@ main article .readmore {
 
 
 /* Wordpress elements */
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+
+
+.sticky {
+
+}
+
+.bypostauthor {
+
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; 
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+.comments ul {
+	margin-bottom: 2rem;
+	}
+
+.comments ul li{
+	padding: 2rem 0;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	background: #fafafa;
+	padding: 1rem 2rem;
+	}
+
+/* forms */
+
+textarea, input {
+	display: block;
+	width: 96%;
+	padding: 1rem;
+	border: 1px solid #c7c7c7;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.6rem;
+}
+
+input[type="submit"] {
+	width: auto;
+
+}
 
 
 /* Responsive */
