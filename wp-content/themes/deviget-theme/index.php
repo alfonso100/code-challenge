@@ -18,8 +18,8 @@
 
 				<!-- post details -->
 				<div class="post-meta">
-				<span class="author"><?php _e( 'by', 'deviget_theme' ); ?> <?php the_author_posts_link(); ?></span> 
-				<span class="date"><?php _e( 'on', 'deviget_theme' ); ?> <?php the_time('F j, Y'); ?></span>
+				<span class="author"><?php _e( 'by', 'deviget-theme' ); ?> <?php the_author_posts_link(); ?></span> 
+				<span class="date"><?php _e( 'on', 'deviget-theme' ); ?> <?php the_time('F j, Y'); ?></span>
 				</div>
 				<!-- end post details -->
 
@@ -35,8 +35,8 @@
 				<?php the_excerpt();  ?> 
 
 				<hr />
-				<p class="categories"><?php _e( 'Categories: ', 'deviget_theme' ); ?> <?php echo get_the_category_list(', '); ?></p>
-				<p class="readmore"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e( 'Continue reading &raquo;', 'deviget_theme' ); ?></a></p>
+				<p class="categories"><?php _e( 'Categories: ', 'deviget-theme' ); ?> <?php echo get_the_category_list(', '); ?></p>
+				<p class="readmore"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e( 'Continue reading &raquo;', 'deviget-theme' ); ?></a></p>
 
 
 			
@@ -49,7 +49,7 @@
 
 			<!-- article -->
 			<article>
-				<h2><?php _e( 'Sorry, nothing to display.', 'deviget_theme' ); ?></h2>
+				<h2><?php _e( 'Sorry, nothing to display.', 'deviget-theme' ); ?></h2>
 			</article>
 			<!-- end article -->
 

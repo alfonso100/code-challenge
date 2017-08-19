@@ -46,7 +46,7 @@
 				<div class="copyright">
 					<div class="wrapper">
 						<p>
-						 <?php _e('Copyright', 'deviget_theme'); ?> &copy; <?php echo date('Y'); ?> Sayed Balkhi. <?php _e('Built with', 'deviget_theme'); ?>
+						 <?php _e('Copyright', 'deviget-theme'); ?> &copy; <?php echo date('Y'); ?> Sayed Balkhi. <?php _e('Built with', 'deviget-theme'); ?>
 						<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; Sample Theme by WPBeginner</a>.
 						</p>
 					 </div> <!-- wrapper -->

@@ -14,7 +14,7 @@ add_action( 'after_setup_theme', 'deviget_slug_setup' );
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu', 'deviget_theme' )
+      'header-menu' => __( 'Header Menu', 'deviget-theme' )
     )
   );
 }
@@ -99,8 +99,8 @@ class Social_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'social_widget', // Base ID
-			esc_html__( 'Social Widget', 'deviget_theme' ), // Name
-			array( 'description' => esc_html__( 'Social networks', 'deviget_theme' ), ) // Args
+			esc_html__( 'Social Widget', 'deviget-theme' ), // Name
+			array( 'description' => esc_html__( 'Social networks', 'deviget-theme' ), ) // Args
 		);
 	}
 
@@ -123,43 +123,43 @@ class Social_Widget extends WP_Widget {
 
 	public function form( $instance ) {
 
-		$title 	= ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'deviget_theme' );
-		$twitter 	= ! empty( $instance['twitter'] ) ? $instance['twitter'] : esc_html__( '', 'deviget_theme' );
-		$facebook 	= ! empty( $instance['facebook'] ) ? $instance['facebook'] : esc_html__( '', 'deviget_theme' );
-		$pinterest 	= ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : esc_html__( '', 'deviget_theme' );
-		$google_plus 	= ! empty( $instance['google_plus'] ) ? $instance['google_plus'] : esc_html__( '', 'deviget_theme' );
-		$rss 	= ! empty( $instance['rss'] ) ? $instance['rss'] : esc_html__( '', 'deviget_theme' );
+		$title 	= ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'deviget-theme' );
+		$twitter 	= ! empty( $instance['twitter'] ) ? $instance['twitter'] : esc_html__( '', 'deviget-theme' );
+		$facebook 	= ! empty( $instance['facebook'] ) ? $instance['facebook'] : esc_html__( '', 'deviget-theme' );
+		$pinterest 	= ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : esc_html__( '', 'deviget-theme' );
+		$google_plus 	= ! empty( $instance['google_plus'] ) ? $instance['google_plus'] : esc_html__( '', 'deviget-theme' );
+		$rss 	= ! empty( $instance['rss'] ) ? $instance['rss'] : esc_html__( '', 'deviget-theme' );
 		?>
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Widget Title:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Widget Title:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php if($title) { echo esc_attr( $title ); } ?>">
 		</p>
 
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_attr_e( 'Twitter URL:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_attr_e( 'Twitter URL:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php if($twitter) { echo esc_attr( $twitter ); } ?>">
 		</p>
 
 
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_attr_e( 'Facebook URL:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_attr_e( 'Facebook URL:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" type="text" value="<?php if($facebook) { echo esc_attr( $facebook ); }?>">
 		</p>
 
 
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>"><?php esc_attr_e( 'Pinterest URL:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>"><?php esc_attr_e( 'Pinterest URL:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'pinterest' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'pinterest' ) ); ?>" type="text" value="<?php if($pinterest) { echo esc_attr( $pinterest ); }?>">
 		</p>
 
 
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>"><?php esc_attr_e( 'Google Plus URL:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>"><?php esc_attr_e( 'Google Plus URL:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'google_plus' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'google_plus' ) ); ?>" type="text" value="<?php if($google_plus) { echo esc_attr( $google_plus ); }?>">
 		</p>
 
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'rss' ) ); ?>"><?php esc_attr_e( 'RSS  URL:', 'deviget_theme' ); ?></label> 
+		<label for="<?php echo esc_attr( $this->get_field_id( 'rss' ) ); ?>"><?php esc_attr_e( 'RSS  URL:', 'deviget-theme' ); ?></label> 
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'rss' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'rss' ) ); ?>" type="text" value="<?php if($rss) { echo esc_attr( $rss ); }?>">
 		</p>
 
@@ -214,7 +214,7 @@ class About_Widget extends WP_Widget
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['name'] ) . $args['after_title'];
 	}
   	if ( ! empty( $instance['description'] ) ) 	{   echo '<p>'.$instance['description'].'</p>'; }
-  	if ( ! empty( $instance['link'] ) ) 		{   echo '<a href="'.$instance['link'].'">'; echo esc_attr_e( 'Read more &raquo;', 'deviget_theme' ); echo '</a></p>'; }
+  	if ( ! empty( $instance['link'] ) ) 		{   echo '<a href="'.$instance['link'].'">'; echo esc_attr_e( 'Read more &raquo;', 'deviget-theme' ); echo '</a></p>'; }
   	echo '</div>';
 
   	echo $args['after_widget'];
@@ -223,33 +223,33 @@ class About_Widget extends WP_Widget
 
   public function form( $instance ) {
    	
-   	$image_uri 		= ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : esc_html__( '', 'deviget_theme' );
-   	$name 			= ! empty( $instance['name'] ) ? $instance['name'] : esc_html__( '', 'deviget_theme' );
-   	$description 	= ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'deviget_theme' );
-   	$link 			= ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'deviget_theme' );
+   	$image_uri 		= ! empty( $instance['image_uri'] ) ? $instance['image_uri'] : esc_html__( '', 'deviget-theme' );
+   	$name 			= ! empty( $instance['name'] ) ? $instance['name'] : esc_html__( '', 'deviget-theme' );
+   	$description 	= ! empty( $instance['description'] ) ? $instance['description'] : esc_html__( '', 'deviget-theme' );
+   	$link 			= ! empty( $instance['link'] ) ? $instance['link'] : esc_html__( '', 'deviget-theme' );
 
     ?>
 
     <p class="about-widget-image-container" <?php if(!$image_uri) { ?> style="display:none" <?php } ?>><img class="about-widget-image" src="<?php echo esc_attr( $image_uri ); ?>"></p>
 	<p>
-	<label for="<?php echo esc_attr( $this->get_field_id( 'image_uri' ) ); ?>"><?php esc_attr_e( 'Image:', 'deviget_theme' ); ?></label> 
+	<label for="<?php echo esc_attr( $this->get_field_id( 'image_uri' ) ); ?>"><?php esc_attr_e( 'Image:', 'deviget-theme' ); ?></label> 
 	<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image_uri' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image_uri' ) ); ?>" type="text" value="<?php if($image_uri) { echo esc_attr( $image_uri ); }?>">
 	<input type="button" class="upload_image_button" value="Select Image" />
 	</p>
 
 
 	<p>
-	<label for="<?php echo esc_attr( $this->get_field_id( 'name' ) ); ?>"><?php esc_attr_e( 'Name:', 'deviget_theme' ); ?></label> 
+	<label for="<?php echo esc_attr( $this->get_field_id( 'name' ) ); ?>"><?php esc_attr_e( 'Name:', 'deviget-theme' ); ?></label> 
 	<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'name' ) ); ?>" type="text" value="<?php if($name) { echo esc_attr( $name ); }?>">
 	</p>
 
 	<p>
-	<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_attr_e( 'Description:', 'deviget_theme' ); ?></label> 
+	<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_attr_e( 'Description:', 'deviget-theme' ); ?></label> 
 	<textarea rows="6" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>" type="text"><?php if($description) { echo esc_attr( $description ); }?></textarea>
 	</p>
 	
 	<p>
-	<label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read more link:', 'deviget_theme' ); ?></label> 
+	<label for="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>"><?php esc_attr_e( 'Read more link:', 'deviget-theme' ); ?></label> 
 	<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'link' ) ); ?>" type="text" value="<?php if($link) { echo esc_attr( $link ); }?>">
 	</p>
 

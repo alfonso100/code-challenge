@@ -19,9 +19,9 @@
 
 				<!-- post details -->
 				<div class="post-meta">
-				<span class="author"><?php _e( 'by', 'deviget_theme' ); ?> <?php the_author_posts_link(); ?></span> 
-				<span class="date"><?php _e( 'on', 'deviget_theme' ); ?> <?php the_time('F j, Y'); ?></span>
-					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'deviget_theme' ), __( '1 Comment', 'deviget_theme' ), __( '% Comments', 'deviget_theme' )); ?></span>
+				<span class="author"><?php _e( 'by', 'deviget-theme' ); ?> <?php the_author_posts_link(); ?></span> 
+				<span class="date"><?php _e( 'on', 'deviget-theme' ); ?> <?php the_time('F j, Y'); ?></span>
+					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'deviget-theme' ), __( '1 Comment', 'deviget-theme' ), __( '% Comments', 'deviget-theme' )); ?></span>
 				</div>
 				<!-- end post details -->
 
@@ -41,7 +41,7 @@
 
 			<hr />
 			
-			<p class="categories"><?php _e( 'Categories: ', 'deviget_theme' ); ?> <?php echo get_the_category_list(', '); ?> - <?php the_tags(); ?></p>
+			<p class="categories"><?php _e( 'Categories: ', 'deviget-theme' ); ?> <?php echo get_the_category_list(', '); ?> - <?php the_tags(); ?></p>
 
 
 			<?php comments_template(); ?>
@@ -56,7 +56,7 @@
 		<!-- article -->
 		<article>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'deviget_theme' ); ?></h1>
+			<h1><?php _e( 'Sorry, nothing to display.', 'deviget-theme' ); ?></h1>
 
 		</article>
 		<!-- end article -->
